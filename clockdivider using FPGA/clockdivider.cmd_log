@@ -1,0 +1,7 @@
+xst -ise "C:/Xilinx/clockdivider/clockdivider" -intstyle ise -ifn clockdivider.xst -ofn clockdivider.syr
+ngdbuild -ise "C:/Xilinx/clockdivider/clockdivider" -intstyle ise -dd _ngo -nt timestamp -uc clockdivider.ucf -p xc3s400-tq144-5 clockdivider.ngc clockdivider.ngd
+ngdbuild -ise "C:/Xilinx/clockdivider/clockdivider" -intstyle ise -dd _ngo -nt timestamp -uc clockdivider.ucf -p xc3s400-tq144-5 clockdivider.ngc clockdivider.ngd
+map -ise "C:/Xilinx/clockdivider/clockdivider" -intstyle ise -p xc3s400-tq144-5 -cm area -pr b -k 4 -c 100 -o clockdivider_map.ncd clockdivider.ngd clockdivider.pcf
+par -ise "C:/Xilinx/clockdivider/clockdivider" -w -intstyle ise -ol std -t 1 clockdivider_map.ncd clockdivider.ncd clockdivider.pcf
+trce -ise "C:/Xilinx/clockdivider/clockdivider" -intstyle ise -e 3 -l 3 -s 5 -xml clockdivider clockdivider.ncd -o clockdivider.twr clockdivider.pcf
+bitgen -ise "C:/Xilinx/clockdivider/clockdivider" -intstyle ise -f clockdivider.ut clockdivider.ncd

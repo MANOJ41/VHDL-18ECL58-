@@ -1,0 +1,11 @@
+//! **************************************************************************
+// Written by: Map I.24 on Wed Dec 16 14:33:41 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clock" LOCATE = SITE "P52" LEVEL 1;
+COMP "out<0>" LOCATE = SITE "P12" LEVEL 1;
+COMP "out<1>" LOCATE = SITE "P17" LEVEL 1;
+COMP "out<2>" LOCATE = SITE "P21" LEVEL 1;
+NET "clock_BUFGP/IBUFG" BEL "clock_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;

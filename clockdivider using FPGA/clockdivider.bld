@@ -1,0 +1,22 @@
+Release 8.1i ngdbuild I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc clockdivider.ucf
+-p xc3s400-tq144-5 clockdivider.ngc clockdivider.ngd 
+
+Reading NGO file 'C:/Xilinx/clockdivider/clockdivider.ngc' ...
+
+Applying constraints in "clockdivider.ucf" to the design...
+
+Checking timing specifications ...
+Checking expanded design ...
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 100104 kilobytes
+
+Writing NGD file "clockdivider.ngd" ...
+
+Writing NGDBUILD log file "clockdivider.bld"...

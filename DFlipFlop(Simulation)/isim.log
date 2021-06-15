@@ -1,0 +1,28 @@
+ command line:
+   ./dff_vv_v_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  52090
+
+Sat Jan 23 11:38:01 2021
+
+Total Line Count = 58
+
+ Elaboration time 0 sec.
+
+ Estimate current memory usage 73.728 Meg. 
+
+ Total signals 14
+ Total nets 12
+ Total signal drivers 7
+ Total blocks 3
+ Total primitive blocks 2
+ Total processes 11
+ntrace select -o on -n /dff_vv_v/qb 
+ntrace select -o on -n /dff_vv_v/q 
+ntrace select -o on -n /dff_vv_v/clk 
+ntrace select -o on -n /dff_vv_v/d 
+ntrace start 
+run 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

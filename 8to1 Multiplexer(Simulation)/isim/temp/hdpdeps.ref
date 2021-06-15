@@ -1,0 +1,7 @@
+V3 7
+FL $XILINX/verilog/src/glbl.v 2005/11/16.16:04:44 I.24
+MO isim_temp/glbl       FL $XILINX/verilog/src/glbl.v
+FL $XILINX/multiplex/mux.v 2020/09/23.14:28:18 I.24
+MO isim_temp/mux        FL $XILINX/multiplex/mux.v
+FL $XILINX/multiplex/mux_vtf.v 2020/09/16.16:23:44 I.24
+MO isim_temp/mux_vtf_v  FL $XILINX/multiplex/mux_vtf.v MI mux

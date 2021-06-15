@@ -1,0 +1,27 @@
+ command line:
+   ./mux_vtf_v_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  49845
+
+Wed Sep 23 14:33:48 2020
+
+Total Line Count = 56
+
+ Elaboration time 0 sec.
+
+ Estimate current memory usage 73.3471 Meg. 
+
+ Total signals 12
+ Total nets 20
+ Total signal drivers 6
+ Total blocks 3
+ Total primitive blocks 2
+ Total processes 9
+ntrace select -o on -n /mux_vtf_v/y 
+ntrace select -o on -n /mux_vtf_v/i 
+ntrace select -o on -n /mux_vtf_v/s 
+ntrace start 
+run 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

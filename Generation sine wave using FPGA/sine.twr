@@ -1,0 +1,65 @@
+--------------------------------------------------------------------------------
+Release 8.1i Trace I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\bin\nt\trce.exe -ise sine.ise -intstyle ise -e 3 -l 3 -s 5 -xml sine
+sine.ncd -o sine.twr sine.pcf
+
+
+Design file:              sine.ncd
+Physical constraint file: sine.pcf
+Device,speed:             xc3s400,-5 (PRODUCTION 1.37 2005-11-04)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  |  Clock |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) |  Phase |
+------------+------------+------------+------------------+--------+
+F           |    8.063(R)|   -1.640(R)|clk_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  |  Clock |
+Destination | to PAD     |Internal Clock(s) |  Phase |
+------------+------------+------------------+--------+
+dout<0>     |    9.546(R)|clk_BUFGP         |   0.000|
+dout<1>     |    9.530(R)|clk_BUFGP         |   0.000|
+dout<2>     |    9.677(R)|clk_BUFGP         |   0.000|
+dout<3>     |    9.393(R)|clk_BUFGP         |   0.000|
+dout<4>     |    9.423(R)|clk_BUFGP         |   0.000|
+dout<5>     |    9.461(R)|clk_BUFGP         |   0.000|
+dout<6>     |    9.393(R)|clk_BUFGP         |   0.000|
+dout<7>     |    9.903(R)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   12.206|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Analysis completed Wed Dec 02 15:28:02 2020
+--------------------------------------------------------------------------------
+
+
+
+Peak Memory Usage: 172 MB

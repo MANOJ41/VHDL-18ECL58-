@@ -1,0 +1,22 @@
+Release 8.1i ngdbuild I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+Command Line: ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc dcmotor.ucf -p
+xc3s400-tq144-5 dcmotor.ngc dcmotor.ngd 
+
+Reading NGO file 'C:/Xilinx/dcmotor/dcmotor.ngc' ...
+
+Applying constraints in "dcmotor.ucf" to the design...
+
+Checking timing specifications ...
+Checking expanded design ...
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 100004 kilobytes
+
+Writing NGD file "dcmotor.ngd" ...
+
+Writing NGDBUILD log file "dcmotor.bld"...

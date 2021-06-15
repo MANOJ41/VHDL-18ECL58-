@@ -1,0 +1,6 @@
+# begin LFP file C:\Xilinx\sine\sine.lfp
+designfile sine.v
+parttype xc3s400-5-tq144
+bus_delimiter 1;
+set_busdelim_onsave 1;
+NET "F" COLOR=15  ;

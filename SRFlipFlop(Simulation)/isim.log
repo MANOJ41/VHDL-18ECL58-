@@ -1,0 +1,25 @@
+ command line:
+   ./srff_vv_v_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  52063
+
+Sat Jan 23 11:21:57 2021
+
+Total Line Count = 63
+
+ Elaboration time 0.03125 sec.
+
+ Estimate current memory usage 73.1423 Meg. 
+
+ Total signals 14
+ Total nets 13
+ Total signal drivers 7
+ Total blocks 3
+ Total primitive blocks 2
+ Total processes 11
+ntrace select -o on -m / -l this 
+ntrace start 
+run 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

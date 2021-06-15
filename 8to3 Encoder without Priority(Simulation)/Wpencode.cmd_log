@@ -1,0 +1,3 @@
+xst -ise "C:/Xilinx/encode/encode" -intstyle ise -ifn Wpencode.xst -ofn Wpencode.syr
+xst -ise "C:/Xilinx/encode/encode" -intstyle ise -ifn Wpencode.xst -ofn Wpencode.syr
+xst -ise "C:/Xilinx/encode/encode" -intstyle ise -ifn Wpencode.xst -ofn Wpencode.syr

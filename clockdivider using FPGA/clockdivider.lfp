@@ -1,0 +1,5 @@
+# begin LFP file C:\Xilinx\clockdivider\clockdivider.lfp
+designfile clockdivider.v
+parttype xc3s400-5-tq144
+bus_delimiter 1;
+set_busdelim_onsave 1;

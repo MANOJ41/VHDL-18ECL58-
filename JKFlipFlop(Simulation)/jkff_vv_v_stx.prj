@@ -1,0 +1,3 @@
+verilog isim_temp "jkff.v"
+verilog isim_temp "jkff_vv.v"
+verilog isim_temp "C:/Xilinx/verilog/src/glbl.v"

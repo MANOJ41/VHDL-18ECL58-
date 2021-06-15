@@ -1,0 +1,25 @@
+ command line:
+   ./pencode_vtf_v_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  50522
+
+Wed Sep 16 15:37:47 2020
+
+Total Line Count = 78
+
+ Elaboration time 0.015625 sec.
+
+ Estimate current memory usage 74.068 Meg. 
+
+ Total signals 12
+ Total nets 20
+ Total signal drivers 6
+ Total blocks 3
+ Total primitive blocks 2
+ Total processes 9
+ntrace select -o on -m / -l this 
+ntrace start 
+run 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

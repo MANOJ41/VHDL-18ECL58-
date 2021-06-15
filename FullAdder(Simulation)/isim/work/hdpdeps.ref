@@ -1,0 +1,7 @@
+V3 7
+FL $XILINX/fulladder/fulladder.v 2020/10/21.14:23:42 I.24
+MO work/fulladder       FL $XILINX/fulladder/fulladder.v
+FL $XILINX/verilog/src/glbl.v 2005/11/16.16:04:44 I.24
+MO work/glbl            FL $XILINX/verilog/src/glbl.v
+FL $XILINX/fulladder/fulladder_ttf.v 2020/10/21.15:44:37 I.24
+MO work/fulladder_ttf_v FL $XILINX/fulladder/fulladder_ttf.v MI fulladder

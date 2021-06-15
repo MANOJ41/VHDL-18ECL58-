@@ -1,0 +1,6 @@
+xst -ise "C:/Xilinx/dcmotor/dcmotor" -intstyle ise -ifn dcmotor.xst -ofn dcmotor.syr
+ngdbuild -ise "C:/Xilinx/dcmotor/dcmotor" -intstyle ise -dd _ngo -nt timestamp -uc dcmotor.ucf -p xc3s400-tq144-5 dcmotor.ngc dcmotor.ngd
+map -ise "C:/Xilinx/dcmotor/dcmotor" -intstyle ise -p xc3s400-tq144-5 -cm area -pr b -k 4 -c 100 -o dcmotor_map.ncd dcmotor.ngd dcmotor.pcf
+par -ise "C:/Xilinx/dcmotor/dcmotor" -w -intstyle ise -ol std -t 1 dcmotor_map.ncd dcmotor.ncd dcmotor.pcf
+trce -ise "C:/Xilinx/dcmotor/dcmotor" -intstyle ise -e 3 -l 3 -s 5 -xml dcmotor dcmotor.ncd -o dcmotor.twr dcmotor.pcf
+bitgen -ise "C:/Xilinx/dcmotor/dcmotor" -intstyle ise -f dcmotor.ut dcmotor.ncd

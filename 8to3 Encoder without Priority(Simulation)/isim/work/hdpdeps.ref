@@ -1,0 +1,7 @@
+V3 7
+FL $XILINX/encode/Wpencode_vtf.v 2020/09/16.15:05:53 I.24
+MO work/Wpencode_vtf_v  FL $XILINX/encode/Wpencode_vtf.v MI Wpencode
+FL $XILINX/verilog/src/glbl.v 2005/11/16.16:04:44 I.24
+MO work/glbl            FL $XILINX/verilog/src/glbl.v
+FL $XILINX/encode/Wpencode.v 2020/09/16.14:23:05 I.24
+MO work/Wpencode        FL $XILINX/encode/Wpencode.v

@@ -1,0 +1,7 @@
+V3 7
+FL $XILINX/encoders/pencode_vtf.v 2020/09/16.15:37:27 I.24
+MO work/pencode_vtf_v   FL $XILINX/encoders/pencode_vtf.v MI pencode
+FL $XILINX/verilog/src/glbl.v 2005/11/16.16:04:44 I.24
+MO work/glbl            FL $XILINX/verilog/src/glbl.v
+FL $XILINX/encoders/pencode.v 2020/09/16.15:30:59 I.24
+MO work/pencode         FL $XILINX/encoders/pencode.v

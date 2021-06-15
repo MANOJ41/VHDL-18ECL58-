@@ -1,0 +1,7 @@
+V3 7
+FL $XILINX/bcdsync/bcdsync_vtt.v 2021/01/24.15:04:35 I.24
+MO isim_temp/bcdsync_vtt_v FL $XILINX/bcdsync/bcdsync_vtt.v MI bcdsync
+FL $XILINX/bcdsync/bcdsync.v 2021/01/24.15:06:29 I.24
+MO isim_temp/bcdsync    FL $XILINX/bcdsync/bcdsync.v
+FL $XILINX/verilog/src/glbl.v 2005/11/16.16:04:44 I.24
+MO isim_temp/glbl       FL $XILINX/verilog/src/glbl.v

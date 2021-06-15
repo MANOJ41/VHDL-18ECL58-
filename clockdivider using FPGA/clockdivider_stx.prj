@@ -1,0 +1,2 @@
+verilog isim_temp "clockdivider.v"
+verilog isim_temp "C:/Xilinx/verilog/src/glbl.v"

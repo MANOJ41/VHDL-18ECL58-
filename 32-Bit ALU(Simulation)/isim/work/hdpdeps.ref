@@ -1,0 +1,7 @@
+V3 7
+FL $XILINX/ALU/ALU.v 2020/11/18.14:04:17 I.24
+MO work/ALU             FL $XILINX/ALU/ALU.v
+FL $XILINX/verilog/src/glbl.v 2005/11/16.16:04:44 I.24
+MO work/glbl            FL $XILINX/verilog/src/glbl.v
+FL $XILINX/ALU/ALU_tb.v 2020/11/18.14:07:45 I.24
+MO work/ALU_tb_v        FL $XILINX/ALU/ALU_tb.v MI ALU

@@ -1,0 +1,3 @@
+MO bcdsync_vtt_v NULL C:\Xilinx\bcdsync/bcdsync_vtt.v vlg50/bcdsync__vtt__v.bin 1611480992
+MO bcdsync NULL C:\Xilinx\bcdsync/bcdsync.v vlg16/bcdsync.bin 1611480992
+MO glbl NULL C:/Xilinx/verilog/src/glbl.v vlg2D/glbl.bin 1611480992

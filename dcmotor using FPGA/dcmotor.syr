@@ -1,0 +1,465 @@
+Release 8.1i - xst I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.20 s | Elapsed : 0.00 / 1.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.20 s | Elapsed : 0.00 / 1.00 s
+ 
+--> Reading design: dcmotor.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+     4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+     5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "dcmotor.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "dcmotor"
+Output Format                      : NGC
+Target Device                      : xc3s400-5-tq144
+
+---- Source Options
+Top Module Name                    : dcmotor
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : dcmotor.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "dcmotor.v" in library work
+Module <dcmotor> compiled
+No errors in compilation
+Analysis of file <"dcmotor.prj"> succeeded.
+ 
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <dcmotor>.
+WARNING:Xst:905 - "dcmotor.v" line 50: The signals <counter, dutycycle> are missing in the sensitivity list of always block.
+Module <dcmotor> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <dcmotor>.
+    Related source file is "dcmotor.v".
+    Found 8-bit adder for signal <$n0000> created at line 60.
+    Found 9-bit comparator less for signal <$n0003> created at line 60.
+    Found 8-bit comparator lessequal for signal <$n0004> created at line 68.
+    Found 8-bit up counter for signal <counter>.
+    Found 26-bit up counter for signal <div>.
+    Found 8-bit register for signal <dutycycle>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   8 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+Unit <dcmotor> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 2
+ 26-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 2
+ 8-bit comparator lessequal                            : 1
+ 9-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch  <dutycycle_0> (without init value) has a constant value of 0 in block <dcmotor>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 2
+ 26-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 7
+ Flip-Flops                                            : 7
+# Comparators                                          : 2
+ 8-bit comparator lessequal                            : 1
+ 9-bit comparator less                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Loading device for application Rf_Device from file '3s400.nph' in environment C:\Xilinx.
+WARNING:Xst:1291 - FF/Latch <div_9> is unconnected in block <dcmotor>.
+WARNING:Xst:1291 - FF/Latch <div_10> is unconnected in block <dcmotor>.
+WARNING:Xst:1291 - FF/Latch <div_11> is unconnected in block <dcmotor>.
+WARNING:Xst:1291 - FF/Latch <div_12> is unconnected in block <dcmotor>.
+WARNING:Xst:1291 - FF/Latch <div_13> is unconnected in block <dcmotor>.
+WARNING:Xst:1291 - FF/Latch <div_14> is unconnected in block <dcmotor>.
+WARNING:Xst:1291 - FF/Latch <div_15> is unconnected in block <dcmotor>.
+WARNING:Xst:1291 - FF/Latch <div_16> is unconnected in block <dcmotor>.
+WARNING:Xst:1291 - FF/Latch <div_17> is unconnected in block <dcmotor>.
+WARNING:Xst:1291 - FF/Latch <div_18> is unconnected in block <dcmotor>.
+WARNING:Xst:1291 - FF/Latch <div_19> is unconnected in block <dcmotor>.
+WARNING:Xst:1291 - FF/Latch <div_20> is unconnected in block <dcmotor>.
+WARNING:Xst:1291 - FF/Latch <div_21> is unconnected in block <dcmotor>.
+WARNING:Xst:1291 - FF/Latch <div_22> is unconnected in block <dcmotor>.
+WARNING:Xst:1291 - FF/Latch <div_23> is unconnected in block <dcmotor>.
+WARNING:Xst:1291 - FF/Latch <div_24> is unconnected in block <dcmotor>.
+WARNING:Xst:1291 - FF/Latch <div_25> is unconnected in block <dcmotor>.
+
+Optimizing unit <dcmotor> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block dcmotor, actual ratio is 0.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : dcmotor.ngr
+Top Level Output File Name         : dcmotor
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 10
+
+Cell Usage :
+# BELS                             : 100
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1_L                      : 8
+#      LUT2                        : 12
+#      LUT2_L                      : 3
+#      LUT3                        : 5
+#      LUT3_L                      : 2
+#      LUT4                        : 21
+#      LUT4_L                      : 6
+#      MUXCY                       : 24
+#      MUXF5                       : 7
+#      VCC                         : 1
+#      XORCY                       : 8
+# FlipFlops/Latches                : 24
+#      FD                          : 16
+#      FD_1                        : 7
+#      FDR                         : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 6
+#      OBUF                        : 3
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400tq144-5 
+
+ Number of Slices:                      31  out of   3584     0%  
+ Number of Slice Flip Flops:            24  out of   7168     0%  
+ Number of 4 input LUTs:                57  out of   7168     0%  
+ Number of bonded IOBs:                 10  out of     97    10%  
+ Number of GCLKs:                        1  out of      8    12%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+tick(tick1:O)                      | NONE(*)(dutycycle_1)   | 7     |
+clk                                | BUFGP                  | 9     |
+div_8                              | NONE                   | 8     |
+-----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 3.811ns (Maximum Frequency: 262.409MHz)
+   Minimum input arrival time before clock: 2.989ns
+   Maximum output required time after clock: 12.563ns
+   Maximum combinational path delay: 7.824ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'tick'
+  Clock period: 2.263ns (frequency: 441.979MHz)
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Delay:               2.263ns (Levels of Logic = 1)
+  Source:            dutycycle_1 (FF)
+  Destination:       dutycycle_1 (FF)
+  Source Clock:      tick falling
+  Destination Clock: tick falling
+
+  Data Path: dutycycle_1 to dutycycle_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             8   0.626   0.921  dutycycle_1 (dutycycle_1)
+     MUXF5:S->O            1   0.540   0.000  _n0001<1>1111 (_n0001<1>)
+     FD_1:D                    0.176          dutycycle_1
+    ----------------------------------------
+    Total                      2.263ns (1.342ns logic, 0.921ns route)
+                                       (59.3% logic, 40.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.811ns (frequency: 262.409MHz)
+  Total number of paths / destination ports: 45 / 9
+-------------------------------------------------------------------------
+Delay:               3.811ns (Levels of Logic = 9)
+  Source:            div_1 (FF)
+  Destination:       div_8 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: div_1 to div_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.626   0.976  div_1 (div_1)
+     LUT1_L:I0->LO         1   0.479   0.000  div_1_rt (div_1_rt)
+     MUXCY:S->O            1   0.435   0.000  dcmotor_Result<1>cy (dcmotor_Result<1>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  dcmotor_Result<2>cy (dcmotor_Result<2>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  dcmotor_Result<3>cy (dcmotor_Result<3>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  dcmotor_Result<4>cy (dcmotor_Result<4>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  dcmotor_Result<5>cy (dcmotor_Result<5>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  dcmotor_Result<6>cy (dcmotor_Result<6>_cyo)
+     MUXCY:CI->O           0   0.056   0.000  dcmotor_Result<7>cy (dcmotor_Result<7>_cyo)
+     XORCY:CI->O           1   0.786   0.000  dcmotor_Result<8>_xor (Result<8>)
+     FD:D                      0.176          div_8
+    ----------------------------------------
+    Total                      3.811ns (2.835ns logic, 0.976ns route)
+                                       (74.4% logic, 25.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'div_8'
+  Clock period: 3.538ns (frequency: 282.622MHz)
+  Total number of paths / destination ports: 36 / 8
+-------------------------------------------------------------------------
+Delay:               3.538ns (Levels of Logic = 2)
+  Source:            counter_6 (FF)
+  Destination:       counter_7 (FF)
+  Source Clock:      div_8 rising
+  Destination Clock: div_8 rising
+
+  Data Path: counter_6 to counter_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.626   1.074  counter_6 (counter_6)
+     LUT4:I0->O            1   0.479   0.704  dcmotor_Result<4>1cy1_SW3 (N59)
+     LUT4_L:I3->LO         1   0.479   0.000  dcmotor_Result<7>1_xor11 (Result<7>1)
+     FD:D                      0.176          counter_7
+    ----------------------------------------
+    Total                      3.538ns (1.760ns logic, 1.778ns route)
+                                       (49.7% logic, 50.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'tick'
+  Total number of paths / destination ports: 56 / 7
+-------------------------------------------------------------------------
+Offset:              2.989ns (Levels of Logic = 3)
+  Source:            row<0> (PAD)
+  Destination:       dutycycle_1 (FF)
+  Destination Clock: tick falling
+
+  Data Path: row<0> to dutycycle_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            15   0.715   1.305  row_0_IBUF (row_0_IBUF)
+     LUT4:I0->O            1   0.479   0.000  _n0001<6>1111_F (N74)
+     MUXF5:I0->O           1   0.314   0.000  _n0001<6>1111 (_n0001<6>)
+     FD_1:D                    0.176          dutycycle_6
+    ----------------------------------------
+    Total                      2.989ns (1.684ns logic, 1.305ns route)
+                                       (56.3% logic, 43.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'div_8'
+  Total number of paths / destination ports: 22 / 2
+-------------------------------------------------------------------------
+Offset:              10.308ns (Levels of Logic = 11)
+  Source:            counter_1 (FF)
+  Destination:       mtr1 (PAD)
+  Source Clock:      div_8 rising
+
+  Data Path: counter_1 to mtr1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               9   0.626   1.250  counter_1 (counter_1)
+     LUT2:I0->O            1   0.479   0.000  Mcompar__n0003_xnorlut (N14)
+     MUXCY:S->O            1   0.435   0.000  Mcompar__n0003_xnorcy (Mcompar__n0003_xnor_cyo)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar__n0003_xnorcy_rn_0 (Mcompar__n0003_xnor_cyo1)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar__n0003_xnorcy_rn_1 (Mcompar__n0003_xnor_cyo2)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar__n0003_xnorcy_rn_2 (Mcompar__n0003_xnor_cyo3)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar__n0003_xnorcy_rn_3 (Mcompar__n0003_xnor_cyo4)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar__n0003_xnorcy_rn_4 (Mcompar__n0003_xnor_cyo5)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar__n0003_xnorcy_rn_5 (Mcompar__n0003_xnor_cyo6)
+     MUXCY:CI->O           1   0.265   0.851  Mcompar__n0003_xnorcy_rn_6 (Mcompar__n0003_xnor_cyo7)
+     LUT3:I1->O            1   0.479   0.681  mtr11 (mtr1_OBUF)
+     OBUF:I->O                 4.909          mtr1_OBUF (mtr1)
+    ----------------------------------------
+    Total                     10.308ns (7.526ns logic, 2.782ns route)
+                                       (73.0% logic, 27.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'tick'
+  Total number of paths / destination ports: 49 / 2
+-------------------------------------------------------------------------
+Offset:              12.563ns (Levels of Logic = 9)
+  Source:            dutycycle_1 (FF)
+  Destination:       mtr1 (PAD)
+  Source Clock:      tick falling
+
+  Data Path: dutycycle_1 to mtr1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             8   0.626   1.216  dutycycle_1 (dutycycle_1)
+     LUT2:I0->O            1   0.479   0.704  dcmotor__n0000<5>_xor11_SW0 (N161)
+     LUT4:I3->O            1   0.479   0.851  dcmotor__n0000<5>_xor11 (_n0000<5>)
+     LUT2:I1->O            1   0.479   0.000  Mcompar__n0003_xnorlut4 (N18)
+     MUXCY:S->O            1   0.435   0.000  Mcompar__n0003_xnorcy_rn_3 (Mcompar__n0003_xnor_cyo4)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar__n0003_xnorcy_rn_4 (Mcompar__n0003_xnor_cyo5)
+     MUXCY:CI->O           1   0.056   0.000  Mcompar__n0003_xnorcy_rn_5 (Mcompar__n0003_xnor_cyo6)
+     MUXCY:CI->O           1   0.265   0.851  Mcompar__n0003_xnorcy_rn_6 (Mcompar__n0003_xnor_cyo7)
+     LUT3:I1->O            1   0.479   0.681  mtr11 (mtr1_OBUF)
+     OBUF:I->O                 4.909          mtr1_OBUF (mtr1)
+    ----------------------------------------
+    Total                     12.563ns (8.261ns logic, 4.302ns route)
+                                       (65.8% logic, 34.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 4 / 2
+-------------------------------------------------------------------------
+Delay:               7.824ns (Levels of Logic = 3)
+  Source:            dir (PAD)
+  Destination:       mtr1 (PAD)
+
+  Data Path: dir to mtr1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.715   1.040  dir_IBUF (dir_IBUF)
+     LUT3:I0->O            1   0.479   0.681  mtr11 (mtr1_OBUF)
+     OBUF:I->O                 4.909          mtr1_OBUF (mtr1)
+    ----------------------------------------
+    Total                      7.824ns (6.103ns logic, 1.721ns route)
+                                       (78.0% logic, 22.0% route)
+
+=========================================================================
+CPU : 4.94 / 5.30 s | Elapsed : 5.00 / 6.00 s
+ 
+--> 
+
+Total memory usage is 158604 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   19 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

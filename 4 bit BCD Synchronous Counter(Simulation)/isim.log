@@ -1,0 +1,31 @@
+ command line:
+   ./bcdsync_vtt_v_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  64801
+
+Sun Jan 24 15:06:53 2021
+
+Total Line Count = 63
+
+ Elaboration time 0 sec.
+
+ Estimate current memory usage 73.0808 Meg. 
+
+ Total signals 12
+ Total nets 14
+ Total signal drivers 6
+ Total blocks 3
+ Total primitive blocks 2
+ Total processes 13
+ntrace select -o on -n /bcdsync_vtt_v/bcd_out 
+ntrace select -o on -n /bcdsync_vtt_v/bcd_out 
+ntrace select -o on -n /bcdsync_vtt_v/bcd_out 
+ntrace select -o on -n /bcdsync_vtt_v/bcd_out 
+ntrace select -o on -n /bcdsync_vtt_v/bcd_out 
+ntrace select -o on -n /bcdsync_vtt_v/clk 
+ntrace select -o on -n /bcdsync_vtt_v/rst 
+ntrace start 
+run 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

@@ -1,0 +1,53 @@
+--------------------------------------------------------------------------------
+Release 8.1i Trace I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\bin\nt\trce.exe -ise clockdivider.ise -intstyle ise -e 3 -l 3 -s 5
+-xml clockdivider clockdivider.ncd -o clockdivider.twr clockdivider.pcf
+
+
+Design file:              clockdivider.ncd
+Physical constraint file: clockdivider.pcf
+Device,speed:             xc3s400,-5 (PRODUCTION 1.37 2005-11-04)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock clock to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  |  Clock |
+Destination | to PAD     |Internal Clock(s) |  Phase |
+------------+------------+------------------+--------+
+out<0>      |    6.407(R)|clock_BUFGP       |   0.000|
+out<1>      |    9.148(R)|clock_BUFGP       |   0.000|
+            |    8.789(F)|clock_BUFGP       |   0.000|
+out<2>      |    7.355(R)|clock_BUFGP       |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    3.858|         |    1.713|         |
+---------------+---------+---------+---------+---------+
+
+Analysis completed Wed Dec 16 14:33:55 2020
+--------------------------------------------------------------------------------
+
+
+
+Peak Memory Usage: 169 MB

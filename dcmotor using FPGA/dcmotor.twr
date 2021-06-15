@@ -1,0 +1,132 @@
+--------------------------------------------------------------------------------
+Release 8.1i Trace I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\bin\nt\trce.exe -ise dcmotor.ise -intstyle ise -e 3 -l 3 -s 5 -xml
+dcmotor dcmotor.ncd -o dcmotor.twr dcmotor.pcf
+
+
+Design file:              dcmotor.ncd
+Physical constraint file: dcmotor.pcf
+Device,speed:             xc3s400,-5 (PRODUCTION 1.37 2005-11-04)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock row<0> to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  |  Clock |
+Destination | to PAD     |Internal Clock(s) |  Phase |
+------------+------------+------------------+--------+
+mtr1        |   18.811(F)|tick              |   0.000|
+mtr2        |   16.983(F)|tick              |   0.000|
+------------+------------+------------------+--------+
+
+Clock row<1> to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  |  Clock |
+Destination | to PAD     |Internal Clock(s) |  Phase |
+------------+------------+------------------+--------+
+mtr1        |   17.624(F)|tick              |   0.000|
+mtr2        |   15.796(F)|tick              |   0.000|
+------------+------------+------------------+--------+
+
+Clock row<2> to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  |  Clock |
+Destination | to PAD     |Internal Clock(s) |  Phase |
+------------+------------+------------------+--------+
+mtr1        |   18.327(F)|tick              |   0.000|
+mtr2        |   16.499(F)|tick              |   0.000|
+------------+------------+------------------+--------+
+
+Clock row<3> to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  |  Clock |
+Destination | to PAD     |Internal Clock(s) |  Phase |
+------------+------------+------------------+--------+
+mtr1        |   18.551(F)|tick              |   0.000|
+mtr2        |   16.723(F)|tick              |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.199|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock row<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+row<0>         |         |         |    0.069|    2.129|
+row<1>         |         |         |   -0.943|    2.129|
+row<2>         |         |         |   -0.661|    2.129|
+row<3>         |         |         |   -0.037|    2.129|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock row<1>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+row<0>         |         |         |    1.019|    2.129|
+row<1>         |         |         |    0.007|    2.129|
+row<2>         |         |         |    0.289|    2.129|
+row<3>         |         |         |    0.913|    2.129|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock row<2>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+row<0>         |         |         |    0.456|    2.129|
+row<1>         |         |         |   -0.556|    2.129|
+row<2>         |         |         |   -0.274|    2.129|
+row<3>         |         |         |    0.350|    2.129|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock row<3>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+row<0>         |         |         |    0.277|    2.129|
+row<1>         |         |         |   -0.735|    2.129|
+row<2>         |         |         |   -0.453|    2.129|
+row<3>         |         |         |    0.171|    2.129|
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+dir            |mtr1           |   11.605|
+dir            |mtr2           |   11.246|
+rst            |mtr1           |   11.917|
+rst            |mtr2           |   11.553|
+---------------+---------------+---------+
+
+Analysis completed Wed Dec 09 14:10:25 2020
+--------------------------------------------------------------------------------
+
+
+
+Peak Memory Usage: 170 MB

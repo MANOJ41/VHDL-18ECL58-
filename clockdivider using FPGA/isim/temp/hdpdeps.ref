@@ -1,0 +1,5 @@
+V3 4
+FL $XILINX/clockdivider/clockdivider.v 2020/12/09.16:11:52 I.24
+MO isim_temp/clockdivider FL $XILINX/clockdivider/clockdivider.v
+FL $XILINX/verilog/src/glbl.v 2005/11/16.16:04:44 I.24
+MO isim_temp/glbl       FL $XILINX/verilog/src/glbl.v

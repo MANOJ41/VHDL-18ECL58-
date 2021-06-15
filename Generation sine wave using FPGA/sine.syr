@@ -1,0 +1,368 @@
+Release 8.1i - xst I.24
+Copyright (c) 1995-2005 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.17 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.17 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: sine.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+     4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+     5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "sine.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "sine"
+Output Format                      : NGC
+Target Device                      : xc3s400-5-tq144
+
+---- Source Options
+Top Module Name                    : sine
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : sine.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "sine.v" in library work
+Module <sine> compiled
+No errors in compilation
+Analysis of file <"sine.prj"> succeeded.
+ 
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <sine>.
+INFO:Xst:1432 - Contents of array <a> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <a> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Module <sine> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <sine>.
+    Related source file is "sine.v".
+WARNING:Xst:1781 - Signal <a> is used but never assigned. Tied to default value.
+WARNING:Xst:1872 - Variable <j> is used but never assigned.
+    Found 101x8-bit ROM for signal <$n0000> created at line 108.
+    Found 8-bit register for signal <dout>.
+    Found 32-bit adder for signal <$n0001>.
+    Found 32-bit adder for signal <$n0002> created at line 96.
+    Found 32-bit adder for signal <$n0003> created at line 99.
+    Found 33-bit comparator greatequal for signal <$n0007> created at line 89.
+    Found 32-bit comparator greatequal for signal <$n0008> created at line 96.
+    Found 32-bit 8-to-1 multiplexer for signal <$old_i_2>.
+    Found 32-bit register for signal <counter>.
+    Found 32-bit register for signal <i>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred  72 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred  32 Multiplexer(s).
+Unit <sine> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 101x8-bit ROM                                         : 1
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 3
+# Registers                                            : 3
+ 32-bit register                                       : 2
+ 8-bit register                                        : 1
+# Comparators                                          : 2
+ 32-bit comparator greatequal                          : 1
+ 33-bit comparator greatequal                          : 1
+# Multiplexers                                         : 1
+ 32-bit 8-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:1647 - Data output of ROM <Mrom__n0000> in block <sine> is tied to register <dout> in block <sine>.
+INFO:Xst:1650 - The register is removed and the ROM is implemented as read-only block RAM.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Block RAMs                                           : 1
+ 101x8-bit single-port block RAM                       : 1
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 3
+# Registers                                            : 64
+ Flip-Flops                                            : 64
+# Comparators                                          : 2
+ 32-bit comparator greatequal                          : 1
+ 33-bit comparator greatequal                          : 1
+# Multiplexers                                         : 1
+ 32-bit 8-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Loading device for application Rf_Device from file '3s400.nph' in environment C:\Xilinx.
+
+Optimizing unit <sine> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block sine, actual ratio is 3.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : sine.ngr
+Top Level Output File Name         : sine
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 10
+
+Cell Usage :
+# BELS                             : 512
+#      GND                         : 1
+#      INV                         : 33
+#      LUT1                        : 1
+#      LUT1_L                      : 33
+#      LUT2                        : 15
+#      LUT2_D                      : 1
+#      LUT2_L                      : 113
+#      LUT3                        : 2
+#      LUT3_L                      : 1
+#      LUT4                        : 24
+#      LUT4_D                      : 10
+#      LUT4_L                      : 47
+#      MUXCY                       : 136
+#      MUXF5                       : 1
+#      VCC                         : 1
+#      XORCY                       : 93
+# FlipFlops/Latches                : 64
+#      FD                          : 32
+#      FDE                         : 32
+# RAMS                             : 1
+#      RAMB16_S9                   : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 1
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400tq144-5 
+
+ Number of Slices:                     146  out of   3584     4%  
+ Number of Slice Flip Flops:            64  out of   7168     0%  
+ Number of 4 input LUTs:               247  out of   7168     3%  
+ Number of bonded IOBs:                 10  out of     97    10%  
+ Number of BRAMs:                        1  out of     16     6%  
+ Number of GCLKs:                        1  out of      8    12%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 64    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 9.889ns (Maximum Frequency: 101.124MHz)
+   Minimum input arrival time before clock: 4.726ns
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.889ns (frequency: 101.124MHz)
+  Total number of paths / destination ports: 94159 / 64
+-------------------------------------------------------------------------
+Delay:               9.889ns (Levels of Logic = 37)
+  Source:            i_0 (FF)
+  Destination:       i_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: i_0 to i_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               7   0.626   1.201  i_0 (i_0)
+     LUT1_L:I0->LO         1   0.479   0.000  i_0_rt (i_0_rt)
+     MUXCY:S->O            1   0.435   0.000  sine__n0002<0>cy (sine__n0002<0>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<1>cy (sine__n0002<1>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<2>cy (sine__n0002<2>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<3>cy (sine__n0002<3>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<4>cy (sine__n0002<4>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<5>cy (sine__n0002<5>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<6>cy (sine__n0002<6>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<7>cy (sine__n0002<7>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<8>cy (sine__n0002<8>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<9>cy (sine__n0002<9>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<10>cy (sine__n0002<10>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<11>cy (sine__n0002<11>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<12>cy (sine__n0002<12>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<13>cy (sine__n0002<13>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<14>cy (sine__n0002<14>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<15>cy (sine__n0002<15>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<16>cy (sine__n0002<16>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<17>cy (sine__n0002<17>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<18>cy (sine__n0002<18>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<19>cy (sine__n0002<19>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<20>cy (sine__n0002<20>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<21>cy (sine__n0002<21>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<22>cy (sine__n0002<22>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<23>cy (sine__n0002<23>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<24>cy (sine__n0002<24>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<25>cy (sine__n0002<25>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<26>cy (sine__n0002<26>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<27>cy (sine__n0002<27>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<28>cy (sine__n0002<28>_cyo)
+     MUXCY:CI->O           1   0.056   0.000  sine__n0002<29>cy (sine__n0002<29>_cyo)
+     MUXCY:CI->O           0   0.056   0.000  sine__n0002<30>cy (sine__n0002<30>_cyo)
+     XORCY:CI->O           1   0.786   0.851  sine__n0002<31>_xor (_n0002<31>)
+     LUT2_L:I1->LO         1   0.479   0.000  Mcompar__n0008_gelut (N84)
+     MUXCY:S->O           64   0.644   1.754  Mcompar__n0008_gecy (_n0008)
+     LUT4_L:I3->LO         1   0.479   0.000  _old_i_2<0>1_F (N345)
+     MUXF5:I0->O           2   0.314   0.000  _old_i_2<0>1 (_old_i_2<0>)
+     FD:D                      0.176          i_0
+    ----------------------------------------
+    Total                      9.889ns (6.083ns logic, 3.806ns route)
+                                       (61.5% logic, 38.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 64 / 64
+-------------------------------------------------------------------------
+Offset:              4.726ns (Levels of Logic = 3)
+  Source:            F (PAD)
+  Destination:       i_1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: F to i_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            64   0.715   1.901  F_IBUF (F_IBUF)
+     LUT4:I1->O            1   0.479   0.976  _old_i_2<31>1_SW0 (N337)
+     LUT4_L:I0->LO         1   0.479   0.000  _old_i_2<31>1 (_old_i_2<31>)
+     FD:D                      0.176          i_31
+    ----------------------------------------
+    Total                      4.726ns (1.849ns logic, 2.877ns route)
+                                       (39.1% logic, 60.9% route)
+
+=========================================================================
+CPU : 5.77 / 6.13 s | Elapsed : 5.00 / 6.00 s
+ 
+--> 
+
+Total memory usage is 160772 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

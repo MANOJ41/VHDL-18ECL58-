@@ -1,0 +1,25 @@
+ command line:
+   ./clockdivider_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  61975
+
+Sun Jan 10 17:18:16 2021
+
+Total Line Count = 48
+
+ Elaboration time 0.015625 sec.
+
+ Estimate current memory usage 73.2692 Meg. 
+
+ Total signals 10
+ Total nets 12
+ Total signal drivers 6
+ Total blocks 2
+ Total primitive blocks 2
+ Total processes 10
+ntrace select -o on -m / -l this 
+ntrace start 
+run 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

@@ -1,0 +1,8 @@
+xst -ise "C:/Xilinx/stepper/stepper" -intstyle ise -ifn stepper.xst -ofn stepper.syr
+ngdbuild -ise "C:/Xilinx/stepper/stepper" -intstyle ise -dd _ngo -nt timestamp -uc stepper.ucf -p xc3s400-tq144-5 stepper.ngc stepper.ngd
+ngdbuild -ise "C:/Xilinx/stepper/stepper" -intstyle ise -dd _ngo -nt timestamp -uc stepper.ucf -p xc3s400-tq144-5 stepper.ngc stepper.ngd
+ngdbuild -ise "C:/Xilinx/stepper/stepper" -intstyle ise -dd _ngo -nt timestamp -uc stepper.ucf -p xc3s400-tq144-5 stepper.ngc stepper.ngd
+map -ise "C:/Xilinx/stepper/stepper" -intstyle ise -p xc3s400-tq144-5 -cm area -pr b -k 4 -c 100 -o stepper_map.ncd stepper.ngd stepper.pcf
+par -ise "C:/Xilinx/stepper/stepper" -w -intstyle ise -ol std -t 1 stepper_map.ncd stepper.ncd stepper.pcf
+trce -ise "C:/Xilinx/stepper/stepper" -intstyle ise -e 3 -l 3 -s 5 -xml stepper stepper.ncd -o stepper.twr stepper.pcf
+bitgen -ise "C:/Xilinx/stepper/stepper" -intstyle ise -f stepper.ut stepper.ncd

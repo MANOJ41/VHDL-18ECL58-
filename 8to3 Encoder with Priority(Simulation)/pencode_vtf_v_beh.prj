@@ -1,0 +1,3 @@
+verilog work "pencode.v"
+verilog work "pencode_vtf.v"
+verilog work "C:/Xilinx/verilog/src/glbl.v"

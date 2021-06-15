@@ -1,0 +1,3 @@
+verilog work "bcdsync.v"
+verilog work "bcdsync_vtt.v"
+verilog work "C:/Xilinx/verilog/src/glbl.v"

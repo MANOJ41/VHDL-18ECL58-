@@ -1,0 +1,3 @@
+verilog isim_temp "pencode.v"
+verilog isim_temp "pencode_vtf.v"
+verilog isim_temp "C:/Xilinx/verilog/src/glbl.v"

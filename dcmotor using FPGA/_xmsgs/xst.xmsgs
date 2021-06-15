@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="905" delta="unknown" >&quot;<arg fmt="%s" index="1">dcmotor.v</arg>&quot; line <arg fmt="%d" index="2">50</arg>: The signals &lt;<arg fmt="%s" index="3">counter, dutycycle</arg>&gt; are missing in the sensitivity list of always block.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">dutycycle_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">dcmotor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">div_9</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">dcmotor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">div_10</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">dcmotor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">div_11</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">dcmotor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">div_12</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">dcmotor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">div_13</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">dcmotor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">div_14</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">dcmotor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">div_15</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">dcmotor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">div_16</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">dcmotor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">div_17</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">dcmotor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">div_18</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">dcmotor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">div_19</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">dcmotor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">div_20</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">dcmotor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">div_21</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">dcmotor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">div_22</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">dcmotor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">div_23</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">dcmotor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">div_24</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">dcmotor</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">div_25</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">dcmotor</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="unknown" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>

@@ -1,0 +1,7 @@
+V3 7
+FL $XILINX/verilog/src/glbl.v 2005/11/16.16:04:44 I.24
+MO work/glbl            FL $XILINX/verilog/src/glbl.v
+FL $XILINX/jkflipflop/jkff.v 2020/09/30.13:56:03 I.24
+MO work/jkff            FL $XILINX/jkflipflop/jkff.v
+FL $XILINX/jkflipflop/jkff_vv.v 2020/09/30.14:00:34 I.24
+MO work/jkff_vv_v       FL $XILINX/jkflipflop/jkff_vv.v MI jkff

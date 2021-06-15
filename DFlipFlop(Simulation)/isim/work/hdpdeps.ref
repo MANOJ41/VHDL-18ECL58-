@@ -1,0 +1,7 @@
+V3 7
+FL $XILINX/dflip/dff_vv.v 2020/09/23.16:09:46 I.24
+MO work/dff_vv_v        FL $XILINX/dflip/dff_vv.v MI dff
+FL $XILINX/verilog/src/glbl.v 2005/11/16.16:04:44 I.24
+MO work/glbl            FL $XILINX/verilog/src/glbl.v
+FL $XILINX/dflip/dff.v 2020/09/23.16:06:52 I.24
+MO work/dff             FL $XILINX/dflip/dff.v
